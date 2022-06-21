@@ -10,3 +10,5 @@ You are ***prohibited*** from generating any revenue from ActivityDash API.
 - Creating a SaaS application out of ActivityDash API.
 - Selling ActivityDash API with customizations.
 - Charging others to help them install their own instance of ActivityDash API.
+
+Essentially, you're not allowed to create a business from ActivityDash API itself, or make it a feature in your project. You're more than welcome to use it as a tool for your project. 🤠
