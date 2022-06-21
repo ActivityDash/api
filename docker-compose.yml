@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  database:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+  api:
+    build: .
+    command: go run server.go
+    volumes:
+      - .:/home/docker/app
+    ports:
+      - 8080:8080
+    depends_on:
+      - database
