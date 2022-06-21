@@ -7,6 +7,11 @@ services:
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: activitydash_development
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
   api:
     build: .
     command: go run server.go
@@ -15,4 +20,5 @@ services:
     ports:
       - 8080:8080
     depends_on:
-      - database
+      database:
+        condition: service_healthy
