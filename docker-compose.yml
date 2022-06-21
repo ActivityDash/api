@@ -6,6 +6,7 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
+      POSTGRES_DB: activitydash_development
   api:
     build: .
     command: go run server.go

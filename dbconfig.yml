@@ -1,0 +1,11 @@
+development:
+  dialect: postgres
+  datasource: host=database user=postgres password=password dbname=activitydash_development sslmode=disable
+  dir: migrations
+  table: migrations
+
+production:
+  dialect: postgres
+  datasource: dbname=activitydash_production sslmode=disable
+  dir: migrations
+  table: migrations
