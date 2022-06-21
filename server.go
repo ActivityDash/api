@@ -1,8 +1,10 @@
 package main
 
 import (
+	"activitydash/api/graph/customerror"
 	"activitydash/api/graph/resolver"
 	"context"
+	"errors"
 	"log"
 	"net/http"
 	"os"
@@ -27,6 +29,11 @@ func main() {
 
 		// Default error message, don't leak sensitive server info.
 		err.Message = "something went wrong"
+
+		var validationErr *customerror.ValidationError
+		if errors.As(e, &validationErr) {
+			validationErr.SetGqlErrorFields(err)
+		}
 
 		return err
 	})
