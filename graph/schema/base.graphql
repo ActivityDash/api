@@ -3,14 +3,5 @@ directive @goTag(
   value: String
 ) on INPUT_FIELD_DEFINITION | FIELD_DEFINITION
 
-type Query {
-  hello: String!
-}
-
-type Mutation {
-  say(something: String!): SayPayload!
-}
-
-type SayPayload {
-  success: Boolean!
-}
+type Query
+type Mutation

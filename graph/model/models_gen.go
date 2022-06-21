@@ -2,6 +2,17 @@
 
 package model
 
-type SayPayload struct {
-	Success bool `json:"success"`
+type AuthSignUpInput struct {
+	Email    string `json:"email" validate:"required,email"`
+	Password string `json:"password" validate:"required,password"`
+}
+
+type AuthSignUpPayload struct {
+	User                *User  `json:"user"`
+	AuthenticationToken string `json:"authenticationToken"`
+}
+
+type User struct {
+	ID    string `json:"id"`
+	Email string `json:"email"`
 }

@@ -5,18 +5,7 @@ package resolver
 
 import (
 	"activitydash/api/graph/generated"
-	"activitydash/api/graph/model"
-	"context"
-	"fmt"
 )
-
-func (r *mutationResolver) Say(ctx context.Context, something string) (*model.SayPayload, error) {
-	panic(fmt.Errorf("not implemented"))
-}
-
-func (r *queryResolver) Hello(ctx context.Context) (string, error) {
-	panic(fmt.Errorf("not implemented"))
-}
 
 // Mutation returns generated.MutationResolver implementation.
 func (r *Resolver) Mutation() generated.MutationResolver { return &mutationResolver{r} }

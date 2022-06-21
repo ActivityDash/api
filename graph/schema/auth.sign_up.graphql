@@ -1,0 +1,13 @@
+extend type Mutation {
+  authSignUp(input: AuthSignUpInput!): AuthSignUpPayload!
+}
+
+input AuthSignUpInput {
+  email: String! @goTag(key: "validate", value: "required,email")
+  password: String! @goTag(key: "validate", value: "required,password")
+}
+
+type AuthSignUpPayload {
+  user: User!
+  authenticationToken: String!
+}
