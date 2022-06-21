@@ -1,7 +1,7 @@
 # ActivityDash API
 
 ## License
-You are ***allowed*** host your own instance of ActivityDash API for open-source, personal, non-profit, or commercial projects under the [License (Derived from MIT License)](/LICENSE), with one condition:
+You are ***allowed*** to host your own instance of ActivityDash API for open-source, personal, non-profit, or commercial projects under the [License (Derived from MIT License)](/LICENSE), with one condition:
 
 You are ***prohibited*** from generating any revenue from ActivityDash API.
 
